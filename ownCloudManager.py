@@ -7,11 +7,12 @@ def login():
 def createDir(folderName):
     oc = login()
     oc.mkdir(folderName)
-def uploadFile():
+def uploadFile(remote, local):
     oc = login()
-    oc.put_file('testDir/level1.txt', '/Users/amandeep/TestDir/level1.txt')
+    oc.put_file(remote, local)
+   #oc.put_file('testDir/level1.txt', '/Users/amandeep/TestDir/level1.txt')
 
 
-createDir('testDir')
-time.sleep(2)
-uploadFile()
+#createDir('testDir')
+#time.sleep(2)
+#uploadFile()
